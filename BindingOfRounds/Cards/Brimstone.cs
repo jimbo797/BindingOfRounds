@@ -35,7 +35,7 @@ namespace BindingOfRounds.Cards
         {
             //Run when the card is removed from the player
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been removed from player {player.playerID}.");
-            d
+            
         }
 
 
