@@ -1,0 +1,12 @@
+{
+    "name": "BindingOfRounds",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/thunderstore-io",
+    "description": "This mod adds items from The Binding of Isaac",
+    "dependencies": [
+        "BepInEx-BepInExPack_ROUNDS-5.4.1901",
+        "Pykess-CardChoiceSpawnUniqueCardPatch-0.1.10",
+        "Pykess-ModdingUtils-0.4.8",
+        "willis81808-UnboundLib-3.2.14"
+    ]
+}
