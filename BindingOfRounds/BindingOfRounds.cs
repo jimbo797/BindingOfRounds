@@ -19,7 +19,7 @@ namespace BindingOfRounds
     {
         private const string ModId = "com.jimbo797.rounds.BindingOfRounds";
         private const string ModName = "BindingOfRounds";
-        public const string Version = "1.0.2"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.1.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "BOR";
 
         public static BindingOfRounds instance { get; private set; }
@@ -37,6 +37,12 @@ namespace BindingOfRounds
             CustomCard.BuildCard<Brimstone>();
             CustomCard.BuildCard<MagicMushroom>();
             CustomCard.BuildCard<MiniMush>();
+            CustomCard.BuildCard<Polyphemus>();
+            CustomCard.BuildCard<TheWiz>();
+
+            //WIP - need to patch RoundsWithFriends to allow point modifications
+            //CustomCard.BuildCard<Birthright>();
+            //CustomCard.BuildCard<RKey>();
         }
     }
 

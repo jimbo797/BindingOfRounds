@@ -10,44 +10,34 @@ using UnityEngine;
 
 namespace BindingOfRounds.Cards
 {
-    class Brimstone : CustomCard
+    class Birthright : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.projectileColor = Color.red;
-            gun.projectileSize = 4.0f;
-            gun.projectileSpeed = 10.0f;
-            gun.ammo = -90;
-            gun.damage = 0f; //Min damage is 0.25f
-            gun.bursts = 30; //Max burst amount is 100
-            gun.reloadTimeAdd = 5.0f;
-            gun.timeBetweenBullets = 0.02f;
-            gun.forceSpecificShake = false;
-            statModifiers.health = 0.5f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             //Edits values on player when card is selected
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
-            
+
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             //Run when the card is removed from the player
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been removed from player {player.playerID}.");
-            
+
         }
 
 
         protected override string GetTitle()
         {
-            return "Brimstone";
+            return "Birthright";
         }
         protected override string GetDescription()
         {
-            return "BLOOD LASER BARRAGE";
+            return "???";
         }
         protected override GameObject GetCardArt()
         {
@@ -63,23 +53,16 @@ namespace BindingOfRounds.Cards
             {
                 new CardInfoStat()
                 {
-                    positive = false,
-                    stat = "Enemies",
-                    amount = "-100%",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
-                    positive = false,
-                    stat = "Health",
-                    amount = "-50%",
+                    positive = true,
+                    stat = "after scoring a point,",
+                    amount = "Pick a card",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.DestructiveRed;
+            return CardThemeColor.CardThemeColorType.FirepowerYellow;
         }
         public override string GetModName()
         {
