@@ -80,7 +80,7 @@ namespace BindingOfRounds.Cards
                 {
                     positive = false,
                     stat = "Reload time",
-                    amount = "+0.5 sec",
+                    amount = "+0.5s",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
