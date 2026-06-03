@@ -10,18 +10,19 @@ using UnityEngine;
 
 namespace BindingOfRounds.Cards
 {
-    class RKey : CustomCard
+    class SadOnion : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
+            gun.attackSpeed = 0.83f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             //Edits values on player when card is selected
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
-            
+
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -33,11 +34,11 @@ namespace BindingOfRounds.Cards
 
         protected override string GetTitle()
         {
-            return "R Key";
+            return "Sad Onion";
         }
         protected override string GetDescription()
         {
-            return "TIME TO START OVER";
+            return "Tears up";
         }
         protected override GameObject GetCardArt()
         {
@@ -45,7 +46,7 @@ namespace BindingOfRounds.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Uncommon;
+            return CardInfo.Rarity.Common;
         }
         protected override CardInfoStat[] GetStats()
         {
@@ -53,16 +54,16 @@ namespace BindingOfRounds.Cards
             {
                 new CardInfoStat()
                 {
-                    positive = false,
-                    stat = "Wins",
-                    amount = "0",
+                    positive = true,
+                    stat = "Attack speed",
+                    amount = "+20%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.NatureBrown;
+            return CardThemeColor.CardThemeColorType.FirepowerYellow;
         }
         public override string GetModName()
         {

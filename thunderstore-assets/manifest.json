@@ -1,6 +1,6 @@
 {
     "name": "BindingOfRounds",
-    "version_number": "1.1.0",
+    "version_number": "1.2.0",
     "website_url": "https://github.com/jimbo797/BindingOfRounds",
     "description": "This mod adds items from The Binding of Isaac",
     "dependencies": [
@@ -9,6 +9,7 @@
         "Pykess-ModdingUtils-0.4.8",
         "willis81808-UnboundLib-3.2.14",
         "Root-GunProjectileSizePatch-1.1.2",
-        "willuwontu-EvenSpreadPatch-0.0.2"
+        "willuwontu-EvenSpreadPatch-0.0.2",
+        "willuwontu-StopShootingYoureDead-0.0.0"
     ]
 }

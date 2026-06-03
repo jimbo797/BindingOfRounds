@@ -4,6 +4,9 @@ using BindingOfRounds.Cards;
 using HarmonyLib;
 using CardChoiceSpawnUniqueCardPatch.CustomCategories;
 using BepInEx;
+using System;
+using System.Collections.Generic;
+using UnboundLib.GameModes;
 
 namespace BindingOfRounds
 {
@@ -19,7 +22,7 @@ namespace BindingOfRounds
     {
         private const string ModId = "com.jimbo797.rounds.BindingOfRounds";
         private const string ModName = "BindingOfRounds";
-        public const string Version = "1.1.0"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.2.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "BOR";
 
         public static BindingOfRounds instance { get; private set; }
@@ -35,12 +38,26 @@ namespace BindingOfRounds
             instance = this;
 
             CustomCard.BuildCard<Brimstone>();
+            CustomCard.BuildCard<BucketOfLard>();
+            CustomCard.BuildCard<DeadCat>();
+            CustomCard.BuildCard<Fate>();
             CustomCard.BuildCard<MagicMushroom>();
             CustomCard.BuildCard<MiniMush>();
+            CustomCard.BuildCard<NumberOne>();
             CustomCard.BuildCard<Polyphemus>();
+            CustomCard.BuildCard<SadOnion>();
+            CustomCard.BuildCard<ThePact>();
             CustomCard.BuildCard<TheWiz>();
 
-            //WIP - need to patch RoundsWithFriends to allow point modifications
+            //WIP - need to figure out how to attach monobehaviors
+            //CustomCard.BuildCard<CSection>();
+            //CustomCard.BuildCard<SacredHeart>();
+            //CustomCard.BuildCard<JacobsLadder>();
+            //CustomCard.BuildCard<TheVirus>();
+            //CustomCard.BuildCard<BobsBrain>();
+            //CustomCard.BuildCard<HaloOfFlies>();
+
+            //WIP - need to patch RoundsWithFriends to allow point and card-choosing modifications
             //CustomCard.BuildCard<Birthright>();
             //CustomCard.BuildCard<RKey>();
         }

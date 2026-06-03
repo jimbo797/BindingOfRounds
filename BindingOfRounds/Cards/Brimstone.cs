@@ -47,7 +47,7 @@ namespace BindingOfRounds.Cards
         }
         protected override string GetDescription()
         {
-            return "BLOOD LASER BARRAGE";
+            return "Blood laser barrage";
         }
         protected override GameObject GetCardArt()
         {
@@ -63,7 +63,7 @@ namespace BindingOfRounds.Cards
             {
                 new CardInfoStat()
                 {
-                    positive = false,
+                    positive = true,
                     stat = "Enemies",
                     amount = "-100%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned

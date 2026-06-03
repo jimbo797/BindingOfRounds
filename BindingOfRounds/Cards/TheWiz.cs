@@ -40,7 +40,7 @@ namespace BindingOfRounds.Cards
         }
         protected override string GetDescription()
         {
-            return "DOUBLE WIZ SHOT!";
+            return "Double wiz shot!";
         }
         protected override GameObject GetCardArt()
         {
@@ -63,7 +63,7 @@ namespace BindingOfRounds.Cards
                 },
                 new CardInfoStat()
                 {
-                    positive = true,
+                    positive = false,
                     stat = "Bullet spread",
                     amount = "+20%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned

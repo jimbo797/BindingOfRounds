@@ -16,9 +16,10 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.projectileSpeed = 1.75f;
-            statModifiers.sizeMultiplier = 0.6f;
-            statModifiers.movementSpeed = 1.4f;
+            
+            statModifiers.sizeMultiplier = 0.7f;
+            statModifiers.movementSpeed = 1.3f;
+            gun.projectileSpeed = 1.2f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -40,7 +41,7 @@ namespace BindingOfRounds.Cards
         }
         protected override string GetDescription()
         {
-            return "SPEED + RANGE UP";
+            return "Speed + range up";
         }
         protected override GameObject GetCardArt()
         {
@@ -58,21 +59,21 @@ namespace BindingOfRounds.Cards
                 {
                     positive = true,
                     stat = "Size",
-                    amount = "-40%",
+                    amount = "-30%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
                     positive = true,
                     stat = "Movement Speed",
-                    amount = "+40%",
+                    amount = "+30%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Bullet Speed",
-                    amount = "+75%",
+                    stat = "Bullet speed",
+                    amount = "+20%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };

@@ -19,6 +19,7 @@ namespace BindingOfRounds.Cards
             gun.projectileSize = 5f;
             gun.attackSpeed = 4f;
             gun.damage = 2f;
+            gun.ammo = -2;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -40,7 +41,7 @@ namespace BindingOfRounds.Cards
         }
         protected override string GetDescription()
         {
-            return "MEGA TEARS";
+            return "Mega tears";
         }
         protected override GameObject GetCardArt()
         {
@@ -73,6 +74,13 @@ namespace BindingOfRounds.Cards
                     positive = false,
                     stat = "Attack speed",
                     amount = "-75%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "Ammo",
+                    amount = "-2",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
