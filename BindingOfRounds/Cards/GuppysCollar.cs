@@ -10,12 +10,18 @@ using UnityEngine;
 
 namespace BindingOfRounds.Cards
 {
-    class Birthright : CustomCard
+    class GuppysCollar : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
+            var random = new System.Random();
+            var randNum = random.NextDouble();
+            if (randNum < 0.5)
+            {
+                statModifiers.respawns = 1;
+            }
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -33,11 +39,11 @@ namespace BindingOfRounds.Cards
 
         protected override string GetTitle()
         {
-            return "Birthright";
+            return "Guppy's Collar";
         }
         protected override string GetDescription()
         {
-            return "???";
+            return "Eternal life?";
         }
         protected override GameObject GetCardArt()
         {
@@ -45,7 +51,7 @@ namespace BindingOfRounds.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Rare;
+            return CardInfo.Rarity.Uncommon;
         }
         protected override CardInfoStat[] GetStats()
         {
@@ -54,15 +60,15 @@ namespace BindingOfRounds.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "after scoring a point,",
-                    amount = "Pick a card",
+                    stat = "Respawn, with 50% chance on card selection",
+                    amount = "+1",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.FirepowerYellow;
+            return CardThemeColor.CardThemeColorType.MagicPink;
         }
         public override string GetModName()
         {

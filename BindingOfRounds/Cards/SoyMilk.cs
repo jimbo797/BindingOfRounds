@@ -10,17 +10,15 @@ using UnityEngine;
 
 namespace BindingOfRounds.Cards
 {
-    class Polyphemus : CustomCard
+    class SoyMilk : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.projectileSize = 5f;
-            gun.attackSpeed = 4f;
-            gun.damage = 2f;
-            gun.ammo = -2;
-            gun.reloadTimeAdd = 0.5f;
+            gun.damage = 0.25f;
+            gun.attackSpeed = 0.5f;
+            gun.reloadTime = 0.5f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -38,11 +36,11 @@ namespace BindingOfRounds.Cards
 
         protected override string GetTitle()
         {
-            return "Polyphemus";
+            return "Soy Milk";
         }
         protected override string GetDescription()
         {
-            return "Mega tears";
+            return "DMG down + tears way up";
         }
         protected override GameObject GetCardArt()
         {
@@ -58,37 +56,23 @@ namespace BindingOfRounds.Cards
             {
                 new CardInfoStat()
                 {
-                    positive = true,
-                    stat = "Bullet size",
-                    amount = "5x",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
-                    positive = true,
-                    stat = "Damage",
-                    amount = "+100%",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
                     positive = false,
-                    stat = "Attack speed",
+                    stat = "Damage",
                     amount = "-75%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
-                    positive = false,
-                    stat = "Ammo",
-                    amount = "-2",
+                    positive = true,
+                    stat = "Attack speed",
+                    amount = "+100%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
-                    positive = false,
+                    positive = true,
                     stat = "Reload time",
-                    amount = "+0.5 sec",
+                    amount = "-50%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };

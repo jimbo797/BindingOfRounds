@@ -18,6 +18,7 @@ namespace BindingOfRounds.Cards
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
             gun.damage = 1.2f;
             gun.attackSpeed = 0.83f;
+            gun.reloadTimeAdd = 0.25f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -65,6 +66,13 @@ namespace BindingOfRounds.Cards
                     positive = true,
                     stat = "Attack speed",
                     amount = "+20%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "Reload time",
+                    amount = "+0.25 sec",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };

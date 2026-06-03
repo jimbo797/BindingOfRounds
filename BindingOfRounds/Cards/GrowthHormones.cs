@@ -10,17 +10,15 @@ using UnityEngine;
 
 namespace BindingOfRounds.Cards
 {
-    class Polyphemus : CustomCard
+    class GrowthHormones : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.projectileSize = 5f;
-            gun.attackSpeed = 4f;
-            gun.damage = 2f;
-            gun.ammo = -2;
-            gun.reloadTimeAdd = 0.5f;
+            gun.damage = 1.2f;
+            statModifiers.movementSpeed = 1.1f;
+            gun.reloadTimeAdd = 0.25f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -38,11 +36,11 @@ namespace BindingOfRounds.Cards
 
         protected override string GetTitle()
         {
-            return "Polyphemus";
+            return "Growth Hormones";
         }
         protected override string GetDescription()
         {
-            return "Mega tears";
+            return "Speed + DMG up";
         }
         protected override GameObject GetCardArt()
         {
@@ -50,7 +48,7 @@ namespace BindingOfRounds.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Uncommon;
+            return CardInfo.Rarity.Common;
         }
         protected override CardInfoStat[] GetStats()
         {
@@ -59,43 +57,29 @@ namespace BindingOfRounds.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Bullet size",
-                    amount = "5x",
+                    stat = "Damage",
+                    amount = "+20%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Damage",
-                    amount = "+100%",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
-                    positive = false,
-                    stat = "Attack speed",
-                    amount = "-75%",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                },
-                new CardInfoStat()
-                {
-                    positive = false,
-                    stat = "Ammo",
-                    amount = "-2",
+                    stat = "Speed",
+                    amount = "+10%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
                 {
                     positive = false,
                     stat = "Reload time",
-                    amount = "+0.5 sec",
+                    amount = "+0.25 sec",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.EvilPurple;
         }
         public override string GetModName()
         {

@@ -15,6 +15,9 @@
     <Reference Include="BepInEx">
       <HintPath>..\..\..\..\..\Downloads\BepInEx_x64_5.4.19.0\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="BlockForcePatch">
+      <HintPath>..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ROUNDS\profiles\isaac mods\BepInEx\plugins\willuwontu-BlockForcePatch\BlockForcePatch.dll</HintPath>
+    </Reference>
     <Reference Include="CardChoiceSpawnUniqueCardPatch">
       <HintPath>..\..\..\..\..\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ROUNDS\profiles\isaac mods\BepInEx\plugins\Pykess-CardChoiceSpawnUniqueCardPatch\CardChoiceSpawnUniqueCardPatch.dll</HintPath>
     </Reference>

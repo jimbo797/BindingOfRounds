@@ -7,6 +7,7 @@ using BepInEx;
 using System;
 using System.Collections.Generic;
 using UnboundLib.GameModes;
+using UnityEngine;
 
 namespace BindingOfRounds
 {
@@ -22,7 +23,7 @@ namespace BindingOfRounds
     {
         private const string ModId = "com.jimbo797.rounds.BindingOfRounds";
         private const string ModName = "BindingOfRounds";
-        public const string Version = "1.2.0"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.3.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "BOR";
 
         public static BindingOfRounds instance { get; private set; }
@@ -37,15 +38,24 @@ namespace BindingOfRounds
         {
             instance = this;
 
+            CustomCard.BuildCard<Breakfast>();
             CustomCard.BuildCard<Brimstone>();
             CustomCard.BuildCard<BucketOfLard>();
             CustomCard.BuildCard<DeadCat>();
+            CustomCard.BuildCard<Dessert>();
+            CustomCard.BuildCard<Dinner>();
             CustomCard.BuildCard<Fate>();
+            CustomCard.BuildCard<GrowthHormones>();
+            CustomCard.BuildCard<GuppysCollar>();
+            CustomCard.BuildCard<Lunch>();
             CustomCard.BuildCard<MagicMushroom>();
             CustomCard.BuildCard<MiniMush>();
             CustomCard.BuildCard<NumberOne>();
             CustomCard.BuildCard<Polyphemus>();
             CustomCard.BuildCard<SadOnion>();
+            CustomCard.BuildCard<SoyMilk>();
+            CustomCard.BuildCard<SpeedBall>();
+            CustomCard.BuildCard<TheInnerEye>();
             CustomCard.BuildCard<ThePact>();
             CustomCard.BuildCard<TheWiz>();
 
@@ -56,6 +66,12 @@ namespace BindingOfRounds
             //CustomCard.BuildCard<TheVirus>();
             //CustomCard.BuildCard<BobsBrain>();
             //CustomCard.BuildCard<HaloOfFlies>();
+            //CustomCard.BuildCard<MegaMush>();
+            //CustomCard.BuildCard<Continuum>();
+            //CustomCard.BuildCard<CurseoftheTower>();
+            //CustomCard.BuildCard<HolyMantle>();
+            //CustomCard.BuildCard<Esau>();
+            //CustomCard.BuildCard<MomsKnife>();
 
             //WIP - need to patch RoundsWithFriends to allow point and card-choosing modifications
             //CustomCard.BuildCard<Birthright>();
