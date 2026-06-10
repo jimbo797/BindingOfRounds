@@ -6,23 +6,24 @@ using System.Threading.Tasks;
 using UnboundLib;
 using UnboundLib.Cards;
 using UnityEngine;
+using BindingOfRounds.MonoBehaviors;
 
 
 namespace BindingOfRounds.Cards
 {
-    class Dinner : CustomCard
+    class BobsBrain : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
-            //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");\
-            statModifiers.health = 1.80f;
+            //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
+            
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             //Edits values on player when card is selected
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
-
+            //player.gameObject.GetOrAddComponent<BobsBrainBehavior>();
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -34,11 +35,11 @@ namespace BindingOfRounds.Cards
 
         protected override string GetTitle()
         {
-            return "Dinner";
+            return "Bob's Brain";
         }
         protected override string GetDescription()
         {
-            return "HP up";
+            return "CardDescription";
         }
         protected override GameObject GetCardArt()
         {
@@ -55,15 +56,15 @@ namespace BindingOfRounds.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Health",
-                    amount = "+80%",
+                    stat = "Effect",
+                    amount = "No",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.NatureBrown;
+            return CardThemeColor.CardThemeColorType.ColdBlue;
         }
         public override string GetModName()
         {

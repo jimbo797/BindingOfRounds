@@ -27,7 +27,7 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on player when card is selected
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
-
+            
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {

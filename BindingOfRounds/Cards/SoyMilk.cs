@@ -16,7 +16,8 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.damage = 0.25f;
+            gun.damage = 0.4f;
+            gun.ammo = 6;
             gun.attackSpeed = 0.5f;
             gun.reloadTime = 0.5f;
         }
@@ -58,7 +59,14 @@ namespace BindingOfRounds.Cards
                 {
                     positive = false,
                     stat = "Damage",
-                    amount = "-75%",
+                    amount = "-60%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = true,
+                    stat = "Ammo",
+                    amount = "+6",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()

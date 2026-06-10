@@ -15,7 +15,7 @@ namespace BindingOfRounds
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.moddingutils", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.cardchoicespawnuniquecardpatch", BepInDependency.DependencyFlags.HardDependency)]
-    // Declares our mod to Bepin
+    // Declares our mod to Bepin 
     [BepInPlugin(ModId, ModName, Version)]
     // The game our mod is associated with
     [BepInProcess("Rounds.exe")]
@@ -23,7 +23,7 @@ namespace BindingOfRounds
     {
         private const string ModId = "com.jimbo797.rounds.BindingOfRounds";
         private const string ModName = "BindingOfRounds";
-        public const string Version = "1.3.1"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.3.2"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "BOR";
 
         public static BindingOfRounds instance { get; private set; }
@@ -46,7 +46,6 @@ namespace BindingOfRounds
             CustomCard.BuildCard<Dinner>();
             CustomCard.BuildCard<Fate>();
             CustomCard.BuildCard<GrowthHormones>();
-            CustomCard.BuildCard<GuppysCollar>();
             CustomCard.BuildCard<Lunch>();
             CustomCard.BuildCard<MagicMushroom>();
             CustomCard.BuildCard<MiniMush>();
@@ -61,6 +60,7 @@ namespace BindingOfRounds
 
             //WIP - need to figure out how to attach monobehaviors
             //CustomCard.BuildCard<CSection>();
+            //CustomCard.BuildCard<Godhead>();
             //CustomCard.BuildCard<SacredHeart>();
             //CustomCard.BuildCard<JacobsLadder>();
             //CustomCard.BuildCard<TheVirus>();
@@ -72,10 +72,14 @@ namespace BindingOfRounds
             //CustomCard.BuildCard<HolyMantle>();
             //CustomCard.BuildCard<Esau>();
             //CustomCard.BuildCard<MomsKnife>();
+            //CustomCard.BuildCard<GuppysCollar>();
 
             //WIP - need to patch RoundsWithFriends to allow point and card-choosing modifications
             //CustomCard.BuildCard<Birthright>();
             //CustomCard.BuildCard<RKey>();
+
+            //WIP - Other reasons
+            //CustomCard.BuildCard<D4>();
         }
     }
 

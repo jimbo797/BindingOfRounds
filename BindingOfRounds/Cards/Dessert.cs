@@ -16,7 +16,7 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");\
-            statModifiers.health = 1.25f;
+            statModifiers.health = 1.80f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -56,7 +56,7 @@ namespace BindingOfRounds.Cards
                 {
                     positive = true,
                     stat = "Health",
-                    amount = "+25%",
+                    amount = "+80%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };

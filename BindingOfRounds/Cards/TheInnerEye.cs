@@ -16,8 +16,8 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.numberOfProjectiles = 2;
-            gun.spread = 0.3f;
+            //gun.numberOfProjectiles = 2;
+            //gun.spread = 0.3f;
             gun.evenSpread = 1.0f;
             gun.reloadTimeAdd = 0.5f;
         }
@@ -25,7 +25,11 @@ namespace BindingOfRounds.Cards
         {
             //Edits values on player when card is selected
             //UnityEngine.Debug.Log($"[{BindingOfRounds.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
+            
+            gun.numberOfProjectiles += 2;
 
+            // Ok to use assignment here, since I always want to change the spread
+            gun.spread = 0.9f / gun.numberOfProjectiles;
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -65,8 +69,8 @@ namespace BindingOfRounds.Cards
                 new CardInfoStat()
                 {
                     positive = false,
-                    stat = "Bullet spread",
-                    amount = "+30%",
+                    stat = "Max bullet spread",
+                    amount = "30%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()

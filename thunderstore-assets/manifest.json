@@ -1,8 +1,8 @@
 {
     "name": "BindingOfRounds",
-    "version_number": "1.3.1",
+    "version_number": "1.3.2",
     "website_url": "https://github.com/jimbo797/BindingOfRounds",
-    "description": "This mod adds 20 items from The Binding of Isaac",
+    "description": "This mod adds 19 items from The Binding of Isaac",
     "dependencies": [
         "BepInEx-BepInExPack_ROUNDS-5.4.1901",
         "Pykess-CardChoiceSpawnUniqueCardPatch-0.1.10",

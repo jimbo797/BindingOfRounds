@@ -62,7 +62,7 @@ namespace BindingOfRounds.Cards
                 },
                 new CardInfoStat()
                 {
-                    positive = true,
+                    positive = false,
                     stat = "Bullet speed",
                     amount = "-50%",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
